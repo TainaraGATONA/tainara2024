@@ -9,13 +9,24 @@ for(let i=0;i <botoes.length;i++){
         for(let j=0;j<botoes.length;j++) { 
             botoes[j].classList.remove("ativo");
             textos[j].classList.remove("ativo");
-            const contadores = document.querySelectorAll(".contador");
-            const tempoobjetivo1 = new Date("2024-10-05t00:00:00");
-            contadores[0].textcontent = calculatempo(tempoobjetivo1);
-            contadores[0].textcontent = tempoobjetivo1;
-            let tempoatual = new Date();
-            contadores[0].textcontent = tempoobjetivo1 - tempoatual;
+            
         }  
         botoes[i].classList.add("ativo");
-        textos[I].classList.add("ativo")  
-}}
+        textos[I].classList.add("ativo");
+}
+}
+    const contadores = document.querySelectorAll(".contador");
+    const tempoobjetivo1 = new Date("2023-10-05t00:00:00");
+   
+    contadores[0].textcontent = calculatempo(tempoobjetivo1);
+    contadores[0].textcontent = tempoobjetivo1 - tempoatual;
+                  
+function calculatempo(tempoobjetivo) {
+let tempoatual = new Date();
+let tempofinal = tempoobjetivo - tempoatual;
+let segundos = math.floor(tempofinal / 1000);
+let minutos = math.floor(segundos / 60);
+let horas = math.floor(minutos / 60);
+let dias = math.flor(horas / 24);
+return dias;
+}
