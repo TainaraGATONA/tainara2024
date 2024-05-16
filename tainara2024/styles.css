@@ -90,6 +90,15 @@ body {
     font-size: 20px;
     text-align: center;
 }
-
-
+.contador{
+    display:flex;
+    justify-content: center;
+}
+.contador-digito{
+    padding: 0 16px;
+    text-align: center;
+}
+.contador-digito-numero{ font-size: 80px;
+    margin: 0;
+    }
  
