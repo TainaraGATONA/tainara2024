@@ -24,23 +24,27 @@ for(let i=0;i <botoes.length;i++){
 
 function calculatempo(tempoobjetivo) {
 let tempoatual = new Date();
-let tempofinal = tempoobjetivo - tempoatual;
-let segundos = math.floor(tempofinal / 1000);
-let minutos = math.floor(segundos / 60);
-let horas = math.floor(minutos / 60);
-let dias = math.flor(horas / 24);
+let tempofinal = tempoObjetivo - tempoatual;
+let segundos = Math.floor(tempofinal / 1000);
+let minutos = Math.floor(segundos / 60);
+let horas = Math.floor(minutos / 60);
+let dias = Math.flor(horas / 24);
 segundos %= 60;
 minutos %=60;
 horas %= 24;
 if (tempoFinal > 0){
-return dias + "dias" + horas + "horas" + minutos + "minutos" + segundos + "segundos";
+return [dias,horas,minutos,segundos];
 } else {
-return "prazo finalizado";
+return [0,0,0,0];
 }
 }
 function atualizaCronometro(){
+    document.getElementById("dias0").textContent = calculaTempo(tempos[1])[0];
+    document.getElementById("horas0").textContent = calculaTempo(tempos[1])[1];
+    document.getElementById("min0").textContent = calculaTempo(tempos[1])[2];
+    document.getElementById("seg0").textContent = calculaTempo(tempos[1])[3];
     for (let i=0; i<contadores.length;i++){
-    contadores[i].textContent = calculaTempo(tempos[i]);
+   // contadores[i].textContent = calculaTempo(tempos[i]);
     }
     }
     function comecaCronometro(){
